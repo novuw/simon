@@ -6,9 +6,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!--modal code-->
 <head>
     <meta charset= "UTF-8">
-    <title>Simon Says</title>
+    <title style="font-family: Muli">Simon Says</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<script>//Logic for game #990000,  #2db300,  #007a99,  #993d00,  #b30047,  #602040, #009973,  #00b359
+var orderCheck = [];
+var orderClick = [];
+function generateOrder(){
+
+}
+
+
+
+
+
+
+</script>
 <html>
 <body>
     <div class="container-fluid" style="background-color: #00bfff; width: 375px; border-radius: 25px; position: relative; top: 30px;">
@@ -17,17 +30,21 @@
 </br></br></br>
 <div style="padding: 40px">
     <div class="container-fluid" style="text-align: center">
-        <button class="btn btn-default" style="background-color: #ff0000; font-family: Muli;">1</button>
-        <button class="btn btn-default" style="background-color: #53ff1a; font-family: Muli;">2</button>
-        <button class="btn btn-default" style="background-color: #00b8e6; font-family: Muli;">3</button>
-        <button class="btn btn-default" style="background-color: #ff6600; font-family: Muli;">4</button>
+        <button id="1" class="btn btn-default" style="background-color: #ff0000; font-family: Muli;">1</button>
+        <button id="2"  class="btn btn-default" style="background-color: #53ff1a; font-family: Muli;">2</button>
+        <button id="3"  class="btn btn-default" style="background-color: #00b8e6; font-family: Muli;">3</button>
+        <button id="4"  class="btn btn-default" style="background-color: #ff6600; font-family: Muli;">4</button>
 
-        <button class="btn btn-default" style="background-color: #ff0066; font-family: Muli;">5</button>
-        <button class="btn btn-default" style="background-color: #993366; font-family: Muli;">6</button>
-        <button class="btn btn-default" style="background-color: #00cc99; font-family: Muli;">7</button>
-        <button class="btn btn-default" style="background-color: #99ffcc; font-family: Muli;">8</button>
+        <button id="5"  class="btn btn-default" style="background-color: #ff0066; font-family: Muli;">5</button>
+        <button id="6"  class="btn btn-default" style="background-color: #993366; font-family: Muli;">6</button>
+        <button id="7"  class="btn btn-default" style="background-color: #00cc99; font-family: Muli;">7</button>
+        <button id="8"  class="btn btn-default" style="background-color: #99ffcc; font-family: Muli;">8</button>
     </div>
 </div>
+<div style="text-align: center">
+<button style="width: 60px" class="btn btn-default">Start</button>
+</div>
+</br>
 <center><div id='console' style="background-color: black; height: 80px; width: 180px;"><p style="color: white; position: relative; left: -30px; top: 10px;">Current Score: 0</p></div></center>
     <h3 style="font-size: 15px; color: black; font-family: Muli; display: inline-block; position: fixed; right: 10px; bottom: 5px;">Made By: Elijah Harbut</h3>
 </body>
