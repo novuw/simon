@@ -12,15 +12,79 @@
 <script>//Logic for game #990000,  #2db300,  #007a99,  #993d00,  #b30047,  #602040, #009973,  #00b359
 var orderCheck = [];
 var orderClick = [];
-function generateOrder(){
+var level = 1;
+var score = 0;
+var num;
+var counter = 0;
+//
+$('#1').on('click', function(){
+    orderClick.push(1);
+    checkIF();
+});
+$('#2').on('click', function(){
+    orderClick.push(2);
+    checkIF();
+});
+$('#3').on('click', function(){
+    orderClick.push(3);
+    checkIF();
+});
+$('#4').on('click', function(){
+    orderClick.push(4);
+    checkIF();
+});
+$('#5').on('click', function(){
+    orderClick.push(5);
+    checkIF();
+});
+$('#6').on('click', function(){
+    orderClick.push(6);
+    checkIF();
+});
+$('#7').on('click', function(){
+    orderClick.push(7);
+    checkIF();
+});
+$('#8').on('click', function(){
+    orderClick.push(8);
+    checkIF();
+});
+//
+function checkIF(){
+    if (orderClick.length > level){
+        alert('Restart Game! You lose.');
+    }
+    for (var i = 0; i < orderCheck.length; i++){
+        if (orderClick[i] == orderCheck[i]){
 
+        }
+    }
 }
 
+function generateOrder(){
+    while (counter < score){
+        num = Math.floor(Math.random() * (8) + 1);
+        orderCheck.push(num);
+        counter++;
+    }
+}
+function gameLogic(){
+    generateOrder();
+
+
+    score += 1
+    $('#consoletext').html('Current Score: '+score);
+    level += 1;
+    return level;
+}
+$(document).ready(function(){
+    $('#start').on('click', function(){
+        gameLogic();
+    });
 
 
 
-
-
+});
 </script>
 <html>
 <body>
@@ -42,10 +106,10 @@ function generateOrder(){
     </div>
 </div>
 <div style="text-align: center">
-<button style="width: 60px" class="btn btn-default">Start</button>
+<button id="start" style="width: 60px" class="btn btn-default">Start</button>
 </div>
 </br>
-<center><div id='console' style="background-color: black; height: 80px; width: 180px;"><p style="color: white; position: relative; left: -30px; top: 10px;">Current Score: 0</p></div></center>
+<center><div id='console' style="background-color: black; height: 80px; width: 180px;"><p id="consoletext" style="color: white; position: relative; left: -30px; top: 10px;">Current Score: 0</p></div></center>
     <h3 style="font-size: 15px; color: black; font-family: Muli; display: inline-block; position: fixed; right: 10px; bottom: 5px;">Made By: Elijah Harbut</h3>
 </body>
 </html>
