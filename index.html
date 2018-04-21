@@ -16,51 +16,21 @@ var level = 1;
 var score = 0;
 var num;
 var counter = 0;
-//
-$('#1').on('click', function(){
-    orderClick.push(1);
-    checkIF();
-});
-$('#2').on('click', function(){
-    orderClick.push(2);
-    checkIF();
-});
-$('#3').on('click', function(){
-    orderClick.push(3);
-    checkIF();
-});
-$('#4').on('click', function(){
-    orderClick.push(4);
-    checkIF();
-});
-$('#5').on('click', function(){
-    orderClick.push(5);
-    checkIF();
-});
-$('#6').on('click', function(){
-    orderClick.push(6);
-    checkIF();
-});
-$('#7').on('click', function(){
-    orderClick.push(7);
-    checkIF();
-});
-$('#8').on('click', function(){
-    orderClick.push(8);
-    checkIF();
-});
-//
+
+/*
+
+COMMENTss
+
+*/
 function checkIF(){
     if (orderClick.length > level){
         alert('Restart Game! You lose.');
     }
     for (var i = 0; i < orderCheck.length; i++){
         if (orderClick[i] == orderCheck[i]){
-
         }
     }
 }
-
 function generateOrder(){
     while (counter < score){
         num = Math.floor(Math.random() * (8) + 1);
@@ -70,20 +40,24 @@ function generateOrder(){
 }
 function gameLogic(){
     generateOrder();
-
-
     score += 1
     $('#consoletext').html('Current Score: '+score);
     level += 1;
     return level;
 }
 $(document).ready(function(){
+for (var i = 1; i < 9; i++){
+    let counter = i;
+    document.getElementById(counter).addEventListener("click", function(){
+        orderClick.push(counter);
+        console.log('penis');
+        console.log(orderClick);
+    });
+}
+
     $('#start').on('click', function(){
         gameLogic();
     });
-
-
-
 });
 </script>
 <html>
@@ -95,14 +69,14 @@ $(document).ready(function(){
 <div style="padding: 40px">
     <div class="container-fluid" style="text-align: center">
         <button id="1" class="btn btn-default" style="background-color: #ff0000; font-family: Muli;">1</button>
-        <button id="2"  class="btn btn-default" style="background-color: #53ff1a; font-family: Muli;">2</button>
-        <button id="3"  class="btn btn-default" style="background-color: #00b8e6; font-family: Muli;">3</button>
-        <button id="4"  class="btn btn-default" style="background-color: #ff6600; font-family: Muli;">4</button>
+        <button id="2" class="btn btn-default" style="background-color: #53ff1a; font-family: Muli;">2</button>
+        <button id="3" class="btn btn-default" style="background-color: #00b8e6; font-family: Muli;">3</button>
+        <button id="4" class="btn btn-default" style="background-color: #ff6600; font-family: Muli;">4</button>
 
-        <button id="5"  class="btn btn-default" style="background-color: #ff0066; font-family: Muli;">5</button>
-        <button id="6"  class="btn btn-default" style="background-color: #993366; font-family: Muli;">6</button>
-        <button id="7"  class="btn btn-default" style="background-color: #00cc99; font-family: Muli;">7</button>
-        <button id="8"  class="btn btn-default" style="background-color: #99ffcc; font-family: Muli;">8</button>
+        <button id="5" class="btn btn-default" style="background-color: #f00660; font-family: Muli;">5</button>
+        <button id="6" class="btn btn-default" style="background-color: #993366; font-family: Muli;">6</button>
+        <button id="7" class="btn btn-default" style="background-color: #00cc99; font-family: Muli;">7</button>
+        <button id="8" class="btn btn-default" style="background-color: #99ffcc; font-family: Muli;">8</button>
     </div>
 </div>
 <div style="text-align: center">
