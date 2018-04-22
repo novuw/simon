@@ -128,10 +128,10 @@ function generateOrder(){
     }
     var stor = "";
     for (var z = 0; z < orderCheck.length; z++){
-        var intoStor =  String(orderCheck[z]) + ", "
+        var intoStor =  String(orderCheck[z]) + " "
         stor += intoStor;
     }
-    console.log(stor);
+    $('#steps').html('Steps: ' + String(orderCheck.length));
         $('#arr').html('Pattern: ' + stor);
         setTimeout(function(){
         $('#arr').html('Pattern: ');
